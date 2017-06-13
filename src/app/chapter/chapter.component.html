@@ -1,3 +1,8 @@
-<p>
-  chapter works!
-</p>
+<div>
+  <img src={{currentChapter.imgUrl}}>
+
+  <p>{{currentChapter.body}}</p>
+  
+  <button (click)="nextChapter(currentChapter)">{{currentChapter.option1[1]}}</button>
+
+</div>

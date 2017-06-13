@@ -7,12 +7,14 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ChapterComponent } from './chapter/chapter.component';
+import { NewPlayerComponent } from './new-player/new-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ChapterComponent
+    ChapterComponent,
+    NewPlayerComponent
   ],
   imports: [
     BrowserModule,
