@@ -41,6 +41,8 @@ export class ChapterComponent implements OnInit {
     this.router.navigate(['chapters', someChapter.option2[0]]);
   }
 
-
+  addScore() {
+    return this.currentPlayer.score += 5;
+  }
 
 }

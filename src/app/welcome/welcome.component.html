@@ -1,6 +1,7 @@
 <p *ngIf="currentPlayer" > Selected Player: {{currentPlayer.name}} </p>
 
 <h3>Players:</h3>
+<h4>Click Player Name To Set As Current Player</h4>
 <div *ngFor="let player of players" (click)="playerClicked(player)">
   <p>Player # {{player.id}}</p>
   <p>Name: {{player.name}}</p>
@@ -10,4 +11,4 @@
 <app-new-player></app-new-player>
 <br>
 <br>
-<button (click)="goToChapter(currentChapter)">Start Adventure</button>
+<button *ngIf="currentPlayer" (click)="goToChapter(currentChapter)">Start Adventure</button>

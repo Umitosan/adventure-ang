@@ -25,7 +25,7 @@ export class NewPlayerComponent implements OnInit {
   }
 
   submitForm(playerName: string) {
-    this.id += this.players.length +1;
+    this.id = this.players.length +1;
     this.score = 0;
     const newPlayer = new Player(playerName, this.score, this.id);
     this.players.push(newPlayer);
