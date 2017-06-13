@@ -2,7 +2,12 @@
   <img src={{currentChapter.imgUrl}}>
 
   <p>{{currentChapter.body}}</p>
-  
-  <button (click)="nextChapter(currentChapter)">{{currentChapter.option1[1]}}</button>
+  <h3>Player: {{currentPlayer.name}}</h3>
+  <h3>Score: {{currentPlayer.score}}</h3>
+
+  <button (click)="nextChapter1(currentChapter)">{{currentChapter.option1[1]}}</button>
+  <br>
+  <br>
+  <button *ngIf="currentChapter.option2[1]" (click)="nextChapter2(currentChapter)">{{currentChapter.option2[1]}}</button>
 
 </div>

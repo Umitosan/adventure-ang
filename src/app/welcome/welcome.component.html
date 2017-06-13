@@ -1,12 +1,13 @@
-<p>
-  welcome works!
-</p>
+<p *ngIf="currentPlayer" > Selected Player: {{currentPlayer.name}} </p>
 
 <h3>Players:</h3>
-<div *ngFor="let player of players">
-  <p>{{player.name}}</p>
-  <p>{{player.score}}</p>
-  <p>{{player.id}}</p>
+<div *ngFor="let player of players" (click)="playerClicked(player)">
+  <p>Player # {{player.id}}</p>
+  <p>Name: {{player.name}}</p>
+  <p>Score: {{player.score}}</p>
+  <hr>
 </div>
 <app-new-player></app-new-player>
+<br>
+<br>
 <button (click)="goToChapter(currentChapter)">Start Adventure</button>

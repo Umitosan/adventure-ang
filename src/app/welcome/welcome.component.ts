@@ -19,6 +19,7 @@ export class WelcomeComponent implements OnInit {
   players: Player[];
   chapters: Chapter[] = [];
   currentChapter: Chapter;
+  currentPlayer: Player;
 
   constructor(private route: ActivatedRoute, private location: Location, public router: Router, private playerService: PlayerService, private chapterService: ChapterService) { }
 
@@ -32,6 +33,9 @@ export class WelcomeComponent implements OnInit {
     this.router.navigate([ 'chapters', someChapter.id ]);
   }
 
-
+  playerClicked(selectedPlayer) {
+    this.currentPlayer = selectedPlayer;
+    this.currentChapter.currentPlayer = this.currentPlayer;
+  }
 
 }

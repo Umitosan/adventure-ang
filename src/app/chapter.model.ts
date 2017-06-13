@@ -1,4 +1,6 @@
 export class Chapter {
+  currentPlayer: any;
+
   constructor(
     public title: string,
     public body: string,
